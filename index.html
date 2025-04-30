@@ -59,18 +59,14 @@
 
         /* Header & Navigation */
         header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            padding: 1.5rem;
-            z-index: 1000;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: transparent;
-            transition: all 0.3s;
-        }
-
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 1rem;
+    z-index: 1000;
+    background-color: var(--menu-bg);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
         .scrolled {
             background-color: var(--menu-bg);
             box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
@@ -148,7 +144,12 @@
         .mobile-menu a:hover {
             color: var(--accent-color);
         }
-
+@media (max-width: 768px) {
+    .mobile-menu {
+        top: 70px !important;
+        height: calc(100vh - 70px) !important;
+    }
+}
         .close-btn {
             position: absolute;
             top: 2rem;
